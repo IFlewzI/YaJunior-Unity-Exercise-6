@@ -12,7 +12,7 @@ public class EnemySpawnpoint : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
-    public void Spawn(GameObject enemyPrefab)
+    public void Spawn(Enemy enemyPrefab)
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         _audioSource.Play();

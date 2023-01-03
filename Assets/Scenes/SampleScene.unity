@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnpointsParent: {fileID: 1897428862}
-  _prefabForSpawning: {fileID: 6859936594179455173, guid: 2cf341c6c574d91429160d241658af0d, type: 3}
+  _prefabForSpawning: {fileID: 6663938504616298334, guid: 2cf341c6c574d91429160d241658af0d, type: 3}
   _nextSpawnPause: 2
 --- !u!4 &84902505
 Transform:

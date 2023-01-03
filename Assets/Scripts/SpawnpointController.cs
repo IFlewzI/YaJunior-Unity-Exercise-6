@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class SpawnpointController: MonoBehaviour
 {
     [SerializeField] private Transform _spawnpointsParent;
-    [SerializeField] private GameObject _prefabForSpawning;
+    [SerializeField] private Enemy _prefabForSpawning;
     [SerializeField] private float _nextSpawnPause;
 
     private EnemySpawnpoint[] _spawnpoints;
@@ -38,11 +38,13 @@ public class SpawnpointController: MonoBehaviour
 
     private IEnumerator SpawnpointActivator()
     {
+        WaitForSeconds waitingTime = new WaitForSeconds(_nextSpawnPause);
+
         while (_isControllerWorking)
         {
             foreach (var spawnpoint in _spawnpoints)
             {
-                yield return new WaitForSeconds(_nextSpawnPause);
+                yield return waitingTime;
 
                 spawnpoint.Spawn(_prefabForSpawning);
             }
